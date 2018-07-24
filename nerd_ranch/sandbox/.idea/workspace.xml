@@ -24,8 +24,8 @@
       <file leaf-file-name="SimVillage.kt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/SimVillage.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="31" selection-start-column="31" selection-end-column="31" />
+            <state relative-caret-position="135">
+              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
             </state>
           </provider>
         </entry>
@@ -267,8 +267,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/SimVillage.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="31" selection-start-column="31" selection-end-column="31" />
+        <state relative-caret-position="135">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
         </state>
       </provider>
     </entry>
