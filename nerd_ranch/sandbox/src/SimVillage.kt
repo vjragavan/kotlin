@@ -1,12 +1,15 @@
-import javax.print.DocFlavor
-
 fun main(Args: Array<String>) {
-    //when there is only one argument in the anonymous function
-    //you can reference it as 'it' immaterial of the type
-    val greetingFunction = { greeting: String, name:String ->
+
+    val greetingFunction = { name: String, numBuilding: Int->
         val currentYear = 2018
-        "$greeting to SimVillage, Mayor $name, Copyright $currentYear"
+        println("Adding $numBuilding buildings")
+        "Welcome to SimVillage, Mayor $name, Copyright $currentYear"
     }
 
-    println(greetingFunction("Welcome!", "Vijay"))
+    runSimulation("Vijay", greetingFunction)
+
+}
+
+fun runSimulation(name: String, func: (String, Int) -> String) {
+    println(func(name, 10))
 }
