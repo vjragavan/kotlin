@@ -8,20 +8,19 @@ fun main(args: Array<String>) {
     var healthStatus = formatHealthStatus(healthPoints, isBlessed)
     println("$name $healthStatus")
     printPlayerStatus(isAuraVisible, name)
-    castFireBall()
+    castFireBall(3)
 }
 
-private fun castFireBall() {
-    println("A glass of fireball springs into existence")
-}
+private fun castFireBall(numOfBalls: Int = 2) =
+    println("A glass of fireball springs into existence (x$numOfBalls)")
 
 private fun printPlayerStatus(isAuraVisible: Boolean, name: String) {
     var auraStatus = if (isAuraVisible) "Green Aura" else "No Aura"
     println("$name $auraStatus")
 }
 
-private fun formatHealthStatus(healthPoints: Int, isBlessed: Boolean): String {
-    var healthStatus = when (healthPoints) {
+private fun formatHealthStatus(healthPoints: Int, isBlessed: Boolean) =
+   when (healthPoints) {
         100 -> "is in Good Health"
         in 90..99 -> "has few scratches"
         in 75..89 -> {
@@ -31,5 +30,3 @@ private fun formatHealthStatus(healthPoints: Int, isBlessed: Boolean): String {
         in 15..74 -> "is badly wounded"
         else -> "is in awful state"
     }
-    return healthStatus
-}
