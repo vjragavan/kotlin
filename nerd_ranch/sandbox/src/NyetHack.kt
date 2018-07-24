@@ -5,20 +5,23 @@ fun main(args: Array<String>) {
     var isImmortal = false
     var isAuraVisible = healthPoints > 50 && isBlessed || isImmortal
 
-    if (healthPoints == 100)
-        println("${name} is in Good Health")
+    var healthStatus = if (healthPoints == 100)
+        "is in Good Health"
     else if (healthPoints >= 90)
-        println("${name} has few scratches")
+        "has few scratches"
     else if (healthPoints >= 75) {
         if (isBlessed)
-            println("$name has minor injuries, but will heal quickly")
+            "has minor injuries, but will heal quickly"
         else
-            println("$name has minor injuries")
+            "has minor injuries"
     }
     else if (healthPoints >= 15)
-        println("${name} is badly wounded")
+        "is badly wounded"
     else
-        println("${name} is in awful state")
+        "is in awful state"
+
+    //player state
+    println("$name $healthStatus")
 
     if (isAuraVisible)
         println("Green Aura")
